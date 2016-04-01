@@ -53,7 +53,7 @@ sub Run {
             if ( Core.Config.Get('MovedComplexTable') != 1 ) {
                 var ArticleItems = $('#ArticleItems');
                 var ComplexTable = ArticleItems.next();
-                var Copy = ComplexTable.clone();
+                var Copy = ComplexTable.clone(true);
                 ComplexTable.remove();
                 Copy.insertBefore( ArticleItems );
                 Core.Config.Set('MovedComplexTable', 1);
